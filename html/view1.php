@@ -20,13 +20,7 @@
     </div>
 </div>
 
-<div id="roadWorks">
-    <a href="#view_1"><h2>Back</h2></a>
-</div>
 
-<div id="roadEvents">
-    <a href="#view_1"><h2>Back</h2></a>
-</div>
 
 <script>
 
@@ -129,3 +123,12 @@ function updateTFC() {
 
 
 </script>
+
+
+<div id="roadWorks">
+    <a href="#view_1"><h2>Back</h2></a>
+</div>
+
+<div id="roadEvents">
+    <a href="#view_1"><h2>Back</h2></a>
+</div>

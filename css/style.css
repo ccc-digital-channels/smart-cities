@@ -65,25 +65,25 @@
   .square {
     float:left;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
     margin: 4px;
     border-radius: 10px;
   }
   .rect {
     float:left;
     position: relative;
-    width: 939px;
-    height: 297px;
-    margin:1.25%;
+    width: 60vw;
+    height: 10vw;
+    margin: 4px;
     border-radius: 10px;
   }
   .rect2 {
     float:left;
     position: relative;
-    width: 615px;
-    height: 297;
-    margin:1.25%;
+    width: 40vw;
+    height: 10vw;
+    margin: 4px;
     border-radius: 10px;
   }
 }
