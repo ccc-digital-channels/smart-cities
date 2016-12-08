@@ -12,10 +12,13 @@
   }
   main > *:target {
     display: block;
+    animation: pulse 0.5s linear 1;
   }
   main > *:target ~ * {
     display: none;
   }
+
+
 /* Mobile First */
 @media (max-width: 1000px) {
     body {
@@ -27,6 +30,10 @@
     nav ul {
         padding-left: 0px;
     }
+  main {
+      overflow-y: scroll;
+      height: 60vh;
+  }    
 
   .square {
     float:left;
@@ -130,4 +137,13 @@ header {
 /* footer */
 footer {
     display: none;
+}
+
+
+/* animations */
+
+@keyframes pulse {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.05) }
+    100% { transform: scale(1) }
 }

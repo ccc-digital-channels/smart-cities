@@ -28,9 +28,7 @@
     </nav>
     <main role="main">
 
-      <div id="view_1">
-        <?php include 'html/view1.php' ?>
-      </div>        
+    
       <div id="view_2">
         <?php include 'html/view2.php' ?>
       </div>
@@ -46,7 +44,8 @@
       <div id="view_6">
         <h1>View 6</h1>
       </div>
-
+      <!-- first view goes last, so its enabled by default -->
+        <?php include 'html/view1.php' ?>
     </main>
     <footer>
         <?php include 'includes/footer.php' ?>        

@@ -1,21 +1,31 @@
-<h4>TFC Data</h4>
-<div class="rect img_1-1">
-    <span id="tfcCount"></span>
+<div id="view_1">
+    <h4>TFC Data</h4>
+    <a href="#roadWorks"><div class="rect img_1-1">
+        <span id="tfcCount"></span>
+    </div></a>
+    <a href="#roadEvents"><div class="square img_1-1">
+        <span id="tfcCount"></span>
+    </div></a>
+    <div class="square img_1-1">
+        <span id="tfcCount"></span>
+    </div>
+    <div class="square img_1-1">
+        <span id="tfcCount"></span>
+    </div>
+    <div class="rect2 img_1-1">
+        <span id="tfcCount"></span>   
+    </div>
+    <div class="square img_1-1">
+        <span id="tfcCount"></span>
+    </div>
 </div>
-<div class="square img_1-1">
-    <span id="tfcCount"></span>
+
+<div id="roadWorks">
+    <a href="#view_1"><h2>Back</h2></a>
 </div>
-<div class="square img_1-1">
-    <span id="tfcCount"></span>
-</div>
-<div class="square img_1-1">
-    <span id="tfcCount"></span>
-</div>
-<div class="rect2 img_1-1">
-    <span id="tfcCount"></span>   
-</div>
-<div class="square img_1-1">
-    <span id="tfcCount"></span>
+
+<div id="roadEvents">
+    <a href="#view_1"><h2>Back</h2></a>
 </div>
 
 <script>
@@ -74,10 +84,38 @@ function updateTFC() {
             tfcHTML += '<p>'+ tfcRoadWorks.length +' planned Road Works</p>';
             $(tfcTiles[0]).html(tfcHTML);
 
+			for (i = 0; i < tfcRoadWorks.length; i++) {
+                var currentData = tfcRoadWorks[i];
+
+                // generate roadworks list
+                tfcHTML = '<div id="'+ currentData.id +'">';
+                tfcHTML += '<h5>'+currentData.title+'</h5>';
+                tfcHTML += '<p>'+ currentData.publicdescription +'</p>';
+                tfcHTML += '<p>'+ currentData.address +'</p>';
+
+                tfcHTML += '</div><hr>';
+
+                $('div#roadWorks').append(tfcHTML);
+            };            
+
             tfcHTML = '';
             tfcHTML += '<h4>Events</h4>';
             tfcHTML += '<p>'+ tfcEvents.length +' roads affected by events</p>';
-            $(tfcTiles[1]).html(tfcHTML);           
+            $(tfcTiles[1]).html(tfcHTML);   
+
+			for (i = 0; i < tfcEvents.length; i++) {
+                var currentData = tfcEvents[i];
+
+                // generate roadworks list
+                tfcHTML = '<div id="'+ currentData.id +'">';
+                tfcHTML += '<h5>'+currentData.title+'</h5>';
+                tfcHTML += '<p>'+ currentData.publicdescription +'</p>';
+                tfcHTML += '<p>'+ currentData.address +'</p>';
+
+                tfcHTML += '</div><hr>';
+
+                $('div#roadEvents').append(tfcHTML);
+            };                        
 
             tfcHTML = '';
             tfcHTML += '<h4>Roads Closed</h4>';
